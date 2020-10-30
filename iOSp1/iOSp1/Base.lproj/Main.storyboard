@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Capture-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="iOSp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYc-2x-MSq">
+                                <rect key="frame" x="20" y="87" width="367" height="81"/>
+                                <state key="normal" title="Select image!"/>
+                                <connections>
+                                    <action selector="imageSelectButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Wr5-AK-Sa7"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hyP-vb-CRV">
+                                <rect key="frame" x="20" y="151" width="374" height="598"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="hyP-vb-CRV" firstAttribute="top" secondItem="kYc-2x-MSq" secondAttribute="bottom" constant="34" id="Q4l-o8-TKo"/>
+                            <constraint firstItem="hyP-vb-CRV" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="R0X-d4-Vk5"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="hyP-vb-CRV" secondAttribute="trailing" constant="20" id="W4J-zG-QAb"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="kYc-2x-MSq" secondAttribute="trailing" constant="27" id="bcQ-Yw-36I"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="hyP-vb-CRV" secondAttribute="bottom" constant="64" id="h8g-Do-Noc"/>
+                            <constraint firstItem="kYc-2x-MSq" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="ja5-6o-R8y"/>
+                            <constraint firstItem="kYc-2x-MSq" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="43" id="scg-dr-9wk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="txG-XU-pws" appends="YES" id="cyj-cd-pT1"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Capture" image="camera" catalog="system" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="imageView" destination="hyP-vb-CRV" id="Dax-YW-Zy2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="txG-XU-pws">
+                    <connections>
+                        <action selector="swipeNavMade:" destination="9pv-A4-QxB" id="Pvp-yo-yVd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Locate-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="iOSp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VbG-8X-CBu">
+                                <rect key="frame" x="20" y="149" width="374" height="572"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myw-Dp-L8E">
+                                <rect key="frame" x="20" y="82" width="374" height="96"/>
+                                <state key="normal" title="Start / Stop Tracking"/>
+                                <connections>
+                                    <action selector="mapButtonSelected:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="P7D-VJ-Apy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="myw-Dp-L8E" secondAttribute="trailing" constant="20" id="4au-C0-hE6"/>
+                            <constraint firstItem="VbG-8X-CBu" firstAttribute="top" secondItem="myw-Dp-L8E" secondAttribute="bottom" constant="-29" id="9yT-YJ-L9p"/>
+                            <constraint firstItem="myw-Dp-L8E" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="YbZ-qV-AMj"/>
+                            <constraint firstItem="myw-Dp-L8E" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="38" id="hgo-lF-KDZ"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="VbG-8X-CBu" secondAttribute="bottom" constant="92" id="kSL-lh-EKD"/>
+                            <constraint firstItem="VbG-8X-CBu" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="o01-hh-4BR"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="VbG-8X-CBu" secondAttribute="trailing" constant="20" id="ysu-UJ-zyh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Locate" image="location" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapView" destination="VbG-8X-CBu" id="quP-rC-479"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="location" catalog="system" width="128" height="115"/>
+    </resources>
+</document>
