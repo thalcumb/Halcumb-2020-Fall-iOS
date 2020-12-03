@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20A2411" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BathroomBreak" representedClassName="BathroomBreak" syncable="YES" codeGenerationType="class">
+        <attribute name="breakDescription" optional="YES" attributeType="String"/>
+        <attribute name="breakImage" optional="YES" attributeType="String"/>
+        <attribute name="breakLat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="breakLong" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="breakName" optional="YES" attributeType="String"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="bathroomBreak" inverseEntity="Location"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="bathroomBreak" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BathroomBreak" inverseName="location" inverseEntity="BathroomBreak"/>
+    </entity>
+    <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
+        <attribute name="profileLat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="profileLong" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="profileName" optional="YES" attributeType="String"/>
+        <relationship name="bathroomBreak" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BathroomBreak"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location"/>
+    </entity>
+    <elements>
+        <element name="BathroomBreak" positionX="43.109375" positionY="-151.23828125" width="128" height="133"/>
+        <element name="Location" positionX="289.26171875" positionY="14.0703125" width="128" height="103"/>
+        <element name="Profile" positionX="432.86328125" positionY="-219.6328125" width="128" height="104"/>
+    </elements>
+</model>
