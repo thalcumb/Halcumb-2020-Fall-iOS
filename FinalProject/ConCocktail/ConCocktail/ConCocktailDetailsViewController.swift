@@ -70,7 +70,7 @@ class ConCocktailDetailsViewController: ViewController {
                 if let drinkGlass = (drinkValue["strGlass"] as? String)
                 {
                     if(self.DrinkGlassLabel.text == "...") {
-                        let phrase = ("Glass: \t" + drinkGlass)
+                        let phrase = ("Glass: " + drinkGlass)
                         self.DrinkGlassLabel.text = phrase
                     }
                 }
@@ -82,7 +82,7 @@ class ConCocktailDetailsViewController: ViewController {
                 if let drinkIBA = (drinkValue["strIBA"] as? String)
                 {
                     if(self.DrinkIBALabel.text == "...") {
-                        let phrase = ("IBA:\t" + drinkIBA)
+                        let phrase = ("IBA: " + drinkIBA)
                         self.DrinkIBALabel.text = phrase
                     }
                 }
@@ -94,7 +94,7 @@ class ConCocktailDetailsViewController: ViewController {
                 if let drinkCat = (drinkValue["strCategory"] as? String)
                 {
                     if(self.DrinkCatLabel.text == "...") {
-                        let phrase = ("Category:\t" + drinkCat)
+                        let phrase = ("Category: " + drinkCat)
                         self.DrinkCatLabel.text = phrase
                     }
                 }
@@ -138,6 +138,22 @@ class ConCocktailDetailsViewController: ViewController {
                 if let drinkIngred7 = (drinkValue["strIngredient7"] as? String)
                 {
                     phrase = phrase + ", " + drinkIngred7
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred8 = (drinkValue["strIngredient8"] as? String)
+                {
+                    phrase = phrase + ", " + drinkIngred8
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred9 = (drinkValue["strIngredient9"] as? String)
+                {
+                    phrase = phrase + ", " + drinkIngred9
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred10 = (drinkValue["strIngredient10"] as? String)
+                {
+                    print(drinkIngred10)
+                    phrase = phrase + ", " + drinkIngred10
                     self.DrinkIngredientsView.text = phrase
                 }
 

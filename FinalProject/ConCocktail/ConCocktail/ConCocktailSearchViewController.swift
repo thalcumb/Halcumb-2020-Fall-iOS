@@ -94,6 +94,7 @@ class ConCocktailSearchViewController: ViewController, UITableViewDelegate, UITa
         let queryString: String = "https://the-cocktail-db.p.rapidapi.com/filter.php"
        
         drinkResults.removeAll()
+        drinkIDs.removeAll()
         
         if !ingredient.isEmpty {
             AF.request(queryString, parameters: parameters, headers: headers)

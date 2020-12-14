@@ -99,7 +99,7 @@
                                     <action selector="NavBackToRandomPage:" destination="t85-7U-HzZ" eventType="touchUpInside" id="TGH-0s-3gy"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rSH-JR-420">
+                            <searchBar contentMode="redraw" placeholder="ex. Gin, Rum, Vodka, Bourbon" translatesAutoresizingMaskIntoConstraints="NO" id="rSH-JR-420">
                                 <rect key="frame" x="0.0" y="125" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -186,7 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S9r-dc-XHl">
-                                <rect key="frame" x="20" y="520" width="374" height="98"/>
+                                <rect key="frame" x="20" y="520" width="374" height="65"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -204,7 +204,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sqx-Vi-4Cq" firstAttribute="leading" secondItem="KCz-Ec-b1J" secondAttribute="leading" constant="20" id="1NF-Uv-yEc"/>
-                            <constraint firstItem="2kv-R8-8kY" firstAttribute="top" secondItem="S9r-dc-XHl" secondAttribute="bottom" constant="-10" id="57H-oD-LWI"/>
+                            <constraint firstItem="2kv-R8-8kY" firstAttribute="top" secondItem="S9r-dc-XHl" secondAttribute="bottom" constant="23" id="57H-oD-LWI"/>
                             <constraint firstItem="2kv-R8-8kY" firstAttribute="leading" secondItem="KCz-Ec-b1J" secondAttribute="leading" constant="20" id="7ZS-PS-cTY"/>
                             <constraint firstItem="sqx-Vi-4Cq" firstAttribute="top" secondItem="KCz-Ec-b1J" secondAttribute="top" constant="38" id="8Cc-AY-OvO"/>
                             <constraint firstItem="7i0-pn-2Al" firstAttribute="top" secondItem="AXd-fj-Yjw" secondAttribute="bottom" constant="8" id="9t5-vY-Rg3"/>
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHo-uz-duE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="-40"/>
+            <point key="canvasLocation" x="889.85507246376824" y="-40.178571428571423"/>
         </scene>
     </scenes>
     <resources>

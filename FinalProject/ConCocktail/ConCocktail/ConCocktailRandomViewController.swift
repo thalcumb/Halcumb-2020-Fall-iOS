@@ -29,7 +29,7 @@ class ConCocktailRandomViewController: ViewController {
         if segue.destination is ConCocktailDetailsViewController
         {
             let vc = segue.destination as? ConCocktailDetailsViewController
-            vc?.drinkId = "11007"
+            vc?.drinkId = "11011"
         }
     }
     
@@ -41,7 +41,7 @@ class ConCocktailRandomViewController: ViewController {
             "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
         ]
         let parameters: Parameters = [
-            "i" : "11001"
+            "i" : "11011"
         ]
         
         let queryString: String = "https://the-cocktail-db.p.rapidapi.com/lookup.php"
