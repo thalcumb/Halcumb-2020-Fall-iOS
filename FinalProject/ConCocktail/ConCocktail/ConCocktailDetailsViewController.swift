@@ -152,8 +152,33 @@ class ConCocktailDetailsViewController: ViewController {
                 }
                 if let drinkIngred10 = (drinkValue["strIngredient10"] as? String)
                 {
-                    print(drinkIngred10)
                     phrase = phrase + ", " + drinkIngred10
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred11 = (drinkValue["strIngredient11"] as? String)
+                {
+                    phrase = phrase + ", " + drinkIngred11
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred12 = (drinkValue["strIngredient12"] as? String)
+                {
+
+                    phrase = phrase + ", " + drinkIngred12
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred13 = (drinkValue["strIngredient13"] as? String)
+                {
+                    phrase = phrase + ", " + drinkIngred13
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred14 = (drinkValue["strIngredient14"] as? String)
+                {
+                    phrase = phrase + ", " + drinkIngred14
+                    self.DrinkIngredientsView.text = phrase
+                }
+                if let drinkIngred15 = (drinkValue["strIngredient15"] as? String)
+                {
+                    phrase = phrase + ", " + drinkIngred15
                     self.DrinkIngredientsView.text = phrase
                 }
 

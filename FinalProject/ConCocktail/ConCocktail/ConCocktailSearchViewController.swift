@@ -43,6 +43,7 @@ class ConCocktailSearchViewController: ViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath)
             cell.textLabel?.text = drinkResults[indexPath.item]
+        cell.contentView.backgroundColor = UIColor.systemGray6
             return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
