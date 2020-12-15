@@ -35,7 +35,7 @@ class ConCocktailFavoritesController: NSObject {
         
         let drink:ConCocktail = ConCocktail(context: DatabaseController.getContext())
         
-        drink.drinkID = Int16(favID)
+        drink.drinkID = Int32(favID)
         drink.drinkName = favName
         
         var exists = false
@@ -49,10 +49,6 @@ class ConCocktailFavoritesController: NSObject {
             ConCocktailFavoritesController.addDrink(newDrink: drink)
         }
                 
-
-
-
-        
 //        NotificationCenter.default.post(Notification(name:Notification.Name("New_Drink")))
         
     }
