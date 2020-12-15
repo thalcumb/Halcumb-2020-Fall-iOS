@@ -76,5 +76,10 @@ class ConCocktailFavoritesController: NSObject {
         return drinkArray
     }
     
+    class func removeDrink(index:Int) {
+        drinkArray.remove(at: index)
+        DatabaseController.saveContext()
+    }
+    
     
 }

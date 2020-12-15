@@ -52,6 +52,15 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         }
 
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            ConCocktailFavoritesController.removeDrink(index: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is ConCocktailDetailsViewController

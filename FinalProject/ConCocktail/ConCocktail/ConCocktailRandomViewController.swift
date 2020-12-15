@@ -29,7 +29,7 @@ class ConCocktailRandomViewController: ViewController {
         if segue.destination is ConCocktailDetailsViewController
         {
             let vc = segue.destination as? ConCocktailDetailsViewController
-            vc?.drinkId = "11011"
+            vc?.drinkId = "11001"
         }
     }
     
@@ -41,7 +41,7 @@ class ConCocktailRandomViewController: ViewController {
             "x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
         ]
         let parameters: Parameters = [
-            "i" : "11011"
+            "i" : "11001"
         ]
         
         let queryString: String = "https://the-cocktail-db.p.rapidapi.com/lookup.php"
@@ -59,9 +59,9 @@ class ConCocktailRandomViewController: ViewController {
                 let phrase = "Drink of the week: \n" + drinkName
                 
                 let drinkThumbStr: String = drinkValue["strDrinkThumb"] as! String
-                print(drinkThumbStr)
+//                print(drinkThumbStr)
                 
-                print(phrase)
+//                print(phrase)
                 if(self.DrinkNameLabel.text == "...") {
                     self.DrinkNameLabel.text = (phrase)
                 }

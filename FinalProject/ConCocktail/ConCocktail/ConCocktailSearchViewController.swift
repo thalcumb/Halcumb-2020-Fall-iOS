@@ -48,7 +48,7 @@ class ConCocktailSearchViewController: ViewController, UITableViewDelegate, UITa
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedDrink = drinkIDs[indexPath.row]
-        print(selectedDrink!)
+//        print(selectedDrink!)
         
         
         if let newViewController = storyboard?.instantiateViewController(identifier: "ConCocktailDetails") as? ConCocktailDetailsViewController {
@@ -107,7 +107,7 @@ class ConCocktailSearchViewController: ViewController, UITableViewDelegate, UITa
                     if let drink = cocktailObject["drinks"] as? [[String:Any]] {
                         for cocktail in drink {
                             let drinkName: String = cocktail["strDrink"] as! String
-                            print(drinkName)
+//                            print(drinkName)
                             self.drinkResults.append(drinkName)
                             let drinkIDstr: String = cocktail["idDrink"] as! String
 //                            let drinkInt = Int(drinkIDstr)!
