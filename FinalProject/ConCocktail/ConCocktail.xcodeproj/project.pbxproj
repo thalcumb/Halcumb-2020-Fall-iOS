@@ -17,6 +17,10 @@
 		4A82C11A2582D8000009E432 /* ConCocktailRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A82C1192582D8000009E432 /* ConCocktailRandomViewController.swift */; };
 		4A82C11D2582DA8F0009E432 /* ConCocktailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A82C11C2582DA8F0009E432 /* ConCocktailSearchViewController.swift */; };
 		4A82C1222586BC830009E432 /* ConCocktailAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A82C1212586BC830009E432 /* ConCocktailAPIController.swift */; };
+		4AA67D8025882B8A00D375AA /* ConCocktailFavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA67D7F25882B8A00D375AA /* ConCocktailFavoritesController.swift */; };
+		4AA67D8325882C1400D375AA /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA67D8225882C1400D375AA /* DatabaseController.swift */; };
+		4AA67D8725882CE400D375AA /* ConCocktail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AA67D8525882CE400D375AA /* ConCocktail.xcdatamodeld */; };
+		4AA67D922588334700D375AA /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA67D912588334700D375AA /* FavoritesViewController.swift */; };
 		DE1790250DE42BF5083495DD /* Pods_ConCocktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8E51D59D3A7256FAD409D7 /* Pods_ConCocktail.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,10 @@
 		4A82C1192582D8000009E432 /* ConCocktailRandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConCocktailRandomViewController.swift; sourceTree = "<group>"; };
 		4A82C11C2582DA8F0009E432 /* ConCocktailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConCocktailSearchViewController.swift; sourceTree = "<group>"; };
 		4A82C1212586BC830009E432 /* ConCocktailAPIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConCocktailAPIController.swift; sourceTree = "<group>"; };
+		4AA67D7F25882B8A00D375AA /* ConCocktailFavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConCocktailFavoritesController.swift; sourceTree = "<group>"; };
+		4AA67D8225882C1400D375AA /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseController.swift; path = ../../../../Desktop/p2/BathroomBreak/BathroomBreak/DatabaseController.swift; sourceTree = "<group>"; };
+		4AA67D8625882CE400D375AA /* ConCocktail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConCocktail.xcdatamodel; sourceTree = "<group>"; };
+		4AA67D912588334700D375AA /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		9826DD3EB3B088BA9CA2AB40 /* Pods-ConCocktail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConCocktail.release.xcconfig"; path = "Target Support Files/Pods-ConCocktail/Pods-ConCocktail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,17 +80,21 @@
 		4A26470E25803BCE00282770 /* ConCocktail */ = {
 			isa = PBXGroup;
 			children = (
+				4AA67D8525882CE400D375AA /* ConCocktail.xcdatamodeld */,
 				4A26470F25803BCE00282770 /* AppDelegate.swift */,
 				4A26471125803BCE00282770 /* SceneDelegate.swift */,
 				4A26471325803BCE00282770 /* ViewController.swift */,
 				4A26471525803BCE00282770 /* Main.storyboard */,
 				4A26471825803BCF00282770 /* Assets.xcassets */,
 				4A26471A25803BCF00282770 /* LaunchScreen.storyboard */,
+				4AA67D8225882C1400D375AA /* DatabaseController.swift */,
 				4A26471D25803BCF00282770 /* Info.plist */,
 				4A82C1162582CFF10009E432 /* ConCocktailDetailsViewController.swift */,
 				4A82C1192582D8000009E432 /* ConCocktailRandomViewController.swift */,
 				4A82C11C2582DA8F0009E432 /* ConCocktailSearchViewController.swift */,
 				4A82C1212586BC830009E432 /* ConCocktailAPIController.swift */,
+				4AA67D7F25882B8A00D375AA /* ConCocktailFavoritesController.swift */,
+				4AA67D912588334700D375AA /* FavoritesViewController.swift */,
 			);
 			path = ConCocktail;
 			sourceTree = "<group>";
@@ -219,10 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA67D8725882CE400D375AA /* ConCocktail.xcdatamodeld in Sources */,
+				4AA67D8025882B8A00D375AA /* ConCocktailFavoritesController.swift in Sources */,
 				4A82C1222586BC830009E432 /* ConCocktailAPIController.swift in Sources */,
 				4A82C1172582CFF10009E432 /* ConCocktailDetailsViewController.swift in Sources */,
 				4A82C11D2582DA8F0009E432 /* ConCocktailSearchViewController.swift in Sources */,
 				4A26471425803BCE00282770 /* ViewController.swift in Sources */,
+				4AA67D922588334700D375AA /* FavoritesViewController.swift in Sources */,
+				4AA67D8325882C1400D375AA /* DatabaseController.swift in Sources */,
 				4A26471025803BCE00282770 /* AppDelegate.swift in Sources */,
 				4A26471225803BCE00282770 /* SceneDelegate.swift in Sources */,
 				4A82C11A2582D8000009E432 /* ConCocktailRandomViewController.swift in Sources */,
@@ -429,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4AA67D8525882CE400D375AA /* ConCocktail.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4AA67D8625882CE400D375AA /* ConCocktail.xcdatamodel */,
+			);
+			currentVersion = 4AA67D8625882CE400D375AA /* ConCocktail.xcdatamodel */;
+			path = ConCocktail.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A26470425803BCE00282770 /* Project object */;
 }

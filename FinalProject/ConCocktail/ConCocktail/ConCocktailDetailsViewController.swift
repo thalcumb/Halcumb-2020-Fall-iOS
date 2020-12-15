@@ -28,7 +28,7 @@ class ConCocktailDetailsViewController: ViewController {
     @IBOutlet weak var DrinkInstructionsView: UITextView!
     
     var drinkId = ""
-    
+    var drinkName: String = ""
 
     override func viewDidLoad()
     {
@@ -37,6 +37,15 @@ class ConCocktailDetailsViewController: ViewController {
         let drinkInt = Int(drinkId)!
         populateDrinkDetails(id: drinkInt)
     }
+    
+    @IBAction func AddFavoriteConCocktail(_ sender: Any) {
+        print(drinkId)
+        print(drinkName)
+        let drinkInt = Int(drinkId)!
+        ConCocktailFavoritesController.createDrink(favID: drinkInt, favName: drinkName)
+        
+    }
+    
     
     func populateDrinkDetails(id:Int) {
         print(id)
@@ -59,12 +68,12 @@ class ConCocktailDetailsViewController: ViewController {
                 let drink = cocktailObject["drinks"] as! [[String:Any]]
                 
                 let drinkValue = drink[0]
-                let drinkName: String = drinkValue["strDrink"] as! String
+                self.drinkName = drinkValue["strDrink"] as! String
                 
                 let drinkThumbStr: String = drinkValue["strDrinkThumb"] as! String
                 
                 if(self.DrinkNameLabel.text == "...") {
-                    self.DrinkNameLabel.text = (drinkName)
+                    self.DrinkNameLabel.text = (self.drinkName)
                 }
                 
                 if let drinkGlass = (drinkValue["strGlass"] as? String)
@@ -194,6 +203,11 @@ class ConCocktailDetailsViewController: ViewController {
                 {
                     self.DrinkCatLabel.text = "Instructions:\tNone"
                 }
+                
+//                if let drinkVideo = (drinkValue["strVideo"] as? String)
+//                {
+//                    print(drinkVideo)
+//                }
                
                 
                 AF.request(drinkThumbStr, method: .get).response { response in
